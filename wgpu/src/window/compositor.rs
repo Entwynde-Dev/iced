@@ -89,6 +89,7 @@ impl Compositor {
         };
 
         let adapter_options = wgpu::RequestAdapterOptions {
+            apply_limit_buckets: false,
             power_preference: wgpu::PowerPreference::from_env().unwrap_or(power_preference),
             compatible_surface: compatible_surface.as_ref(),
             force_fallback_adapter: false,
@@ -309,6 +310,7 @@ impl graphics::Compositor for Compositor {
         surface.configure(
             &self.engine.device,
             &wgpu::SurfaceConfiguration {
+                color_space: wgpu::SurfaceColorSpace::Auto,
                 usage: wgpu::TextureUsages::RENDER_ATTACHMENT,
                 format: self.format,
                 present_mode: self.settings.present_mode,
