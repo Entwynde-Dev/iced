@@ -17,6 +17,7 @@
 //! [`wgpu`]: https://github.com/gfx-rs/wgpu-rs
 //! [WebGPU API]: https://gpuweb.github.io/gpuweb/
 //! [`glyphon`]: https://github.com/grovesNL/glyphon
+#![recursion_limit = "256"]
 #![doc(
     html_logo_url = "https://raw.githubusercontent.com/iced-rs/iced/9ab6923e943f784985e9ef9ca28b10278297225d/docs/logo.svg"
 )]
@@ -60,11 +61,15 @@ pub use primitive::Primitive;
 #[cfg(feature = "geometry")]
 pub use geometry::Geometry;
 
-use crate::core::renderer;
-use crate::core::{Background, Color, Font, Point, Rectangle, Size, Transformation};
-use crate::graphics::mesh;
-use crate::graphics::text::{Editor, Paragraph};
-use crate::graphics::{Shell, Viewport};
+use crate::{
+    core::{Background, Color, Font, Point, Rectangle, Size, Transformation, renderer},
+    graphics::{
+        Shell,
+        Viewport,
+        mesh,
+        text::{Editor, Paragraph},
+    },
+};
 
 /// A [`wgpu`] graphics renderer for [`iced`].
 ///
@@ -233,7 +238,8 @@ impl Renderer {
             texture,
             if graphics::color::GAMMA_CORRECTION {
                 wgpu::TextureFormat::Rgba8UnormSrgb
-            } else {
+            }
+            else {
                 wgpu::TextureFormat::Rgba8Unorm
             },
         );
@@ -453,7 +459,8 @@ impl Renderer {
                 continue;
             };
 
-            let Some(scissor_rect) = nudge::snap(physical_bounds) else {
+            let Some(scissor_rect) = nudge::snap(physical_bounds)
+            else {
                 continue;
             };
 
@@ -859,7 +866,7 @@ impl graphics::geometry::Renderer for Renderer {
                 }
 
                 layer.draw_text_group(text, transformation);
-            }
+            },
             Geometry::Cached(cache) => {
                 if let Some(meshes) = cache.meshes {
                     layer.draw_mesh_cache(meshes, transformation);
@@ -874,7 +881,7 @@ impl graphics::geometry::Renderer for Renderer {
                 if let Some(text) = cache.text {
                     layer.draw_text_cache(text, transformation);
                 }
-            }
+            },
         }
     }
 }
@@ -933,7 +940,8 @@ impl renderer::Headless for Renderer {
             queue,
             if graphics::color::GAMMA_CORRECTION {
                 wgpu::TextureFormat::Rgba8UnormSrgb
-            } else {
+            }
+            else {
                 wgpu::TextureFormat::Rgba8Unorm
             },
             Some(graphics::Antialiasing::MSAAx4),
