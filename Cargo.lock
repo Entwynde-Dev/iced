@@ -1538,7 +1538,7 @@ checksum = "7f24254aa9a54b5c858eaee2f5bccdb46aaf0e486a595ed5fd8f86ba55232a70"
 
 [[package]]
 name = "iced"
-version = "0.15.0-dev-escamote-custom"
+version = "0.15.0-dev-entwynde-custom"
 dependencies = [
  "iced_core",
  "iced_debug",
@@ -1557,7 +1557,7 @@ dependencies = [
 
 [[package]]
 name = "iced_beacon"
-version = "0.15.0-dev-escamote-custom"
+version = "0.15.0-dev-entwynde-custom"
 dependencies = [
  "bincode 1.3.3",
  "futures",
@@ -1571,7 +1571,7 @@ dependencies = [
 
 [[package]]
 name = "iced_core"
-version = "0.15.0-dev-escamote-custom"
+version = "0.15.0-dev-entwynde-custom"
 dependencies = [
  "bitflags 2.13.2",
  "bytes",
@@ -1590,7 +1590,7 @@ dependencies = [
 
 [[package]]
 name = "iced_debug"
-version = "0.15.0-dev-escamote-custom"
+version = "0.15.0-dev-entwynde-custom"
 dependencies = [
  "cargo-hot-protocol",
  "iced_beacon",
@@ -1601,7 +1601,7 @@ dependencies = [
 
 [[package]]
 name = "iced_devtools"
-version = "0.15.0-dev-escamote-custom"
+version = "0.15.0-dev-entwynde-custom"
 dependencies = [
  "iced_debug",
  "iced_program",
@@ -1611,7 +1611,7 @@ dependencies = [
 
 [[package]]
 name = "iced_futures"
-version = "0.15.0-dev-escamote-custom"
+version = "0.15.0-dev-entwynde-custom"
 dependencies = [
  "futures",
  "iced_core",
@@ -1625,7 +1625,7 @@ dependencies = [
 
 [[package]]
 name = "iced_graphics"
-version = "0.15.0-dev-escamote-custom"
+version = "0.15.0-dev-entwynde-custom"
 dependencies = [
  "bitflags 2.13.2",
  "bytemuck",
@@ -1644,7 +1644,7 @@ dependencies = [
 
 [[package]]
 name = "iced_highlighter"
-version = "0.15.0-dev-escamote-custom"
+version = "0.15.0-dev-entwynde-custom"
 dependencies = [
  "iced_core",
  "two-face",
@@ -1652,7 +1652,7 @@ dependencies = [
 
 [[package]]
 name = "iced_program"
-version = "0.15.0-dev-escamote-custom"
+version = "0.15.0-dev-entwynde-custom"
 dependencies = [
  "iced_graphics",
  "iced_runtime",
@@ -1660,7 +1660,7 @@ dependencies = [
 
 [[package]]
 name = "iced_renderer"
-version = "0.15.0-dev-escamote-custom"
+version = "0.15.0-dev-entwynde-custom"
 dependencies = [
  "iced_graphics",
  "iced_tiny_skia",
@@ -1671,7 +1671,7 @@ dependencies = [
 
 [[package]]
 name = "iced_runtime"
-version = "0.15.0-dev-escamote-custom"
+version = "0.15.0-dev-entwynde-custom"
 dependencies = [
  "bytes",
  "iced_core",
@@ -1683,14 +1683,14 @@ dependencies = [
 
 [[package]]
 name = "iced_selector"
-version = "0.15.0-dev-escamote-custom"
+version = "0.15.0-dev-entwynde-custom"
 dependencies = [
  "iced_core",
 ]
 
 [[package]]
 name = "iced_test"
-version = "0.15.0-dev-escamote-custom"
+version = "0.15.0-dev-entwynde-custom"
 dependencies = [
  "iced_futures",
  "iced_program",
@@ -1705,7 +1705,7 @@ dependencies = [
 
 [[package]]
 name = "iced_tester"
-version = "0.15.0-dev-escamote-custom"
+version = "0.15.0-dev-entwynde-custom"
 dependencies = [
  "iced_test",
  "iced_widget",
@@ -1715,7 +1715,7 @@ dependencies = [
 
 [[package]]
 name = "iced_tiny_skia"
-version = "0.15.0-dev-escamote-custom"
+version = "0.15.0-dev-entwynde-custom"
 dependencies = [
  "bytemuck",
  "cosmic-text",
@@ -1731,7 +1731,7 @@ dependencies = [
 
 [[package]]
 name = "iced_wgpu"
-version = "0.15.0-dev-escamote-custom"
+version = "0.15.0-dev-entwynde-custom"
 dependencies = [
  "bitflags 2.13.2",
  "bytemuck",
@@ -1750,7 +1750,7 @@ dependencies = [
 
 [[package]]
 name = "iced_widget"
-version = "0.15.0-dev-escamote-custom"
+version = "0.15.0-dev-entwynde-custom"
 dependencies = [
  "iced_highlighter",
  "iced_renderer",
@@ -1766,7 +1766,7 @@ dependencies = [
 
 [[package]]
 name = "iced_winit"
-version = "0.15.0-dev-escamote-custom"
+version = "0.15.0-dev-entwynde-custom"
 dependencies = [
  "arboard",
  "iced_debug",

@@ -1,6 +1,6 @@
 [package]
 name = "iced"
-description = "A cross-platform GUI library inspired by Elm. Customized for Escamote."
+description = "A cross-platform GUI library inspired by Elm. Customized for Entwynde."
 version.workspace = true
 edition.workspace = true
 authors.workspace = true
@@ -140,7 +140,7 @@ members = [
 ]
 
 [workspace.package]
-version = "0.15.0-dev-escamote-custom"
+version = "0.15.0-dev-entwynde-custom"
 authors = ["Héctor Ramón Jiménez <hector@hecrj.dev>", "Zach Meyer (Smlfrysamuri) <zach.meyer@outlook.com>"]
 edition = "2024"
 license = "MIT"
@@ -161,24 +161,24 @@ serde           = { version = "=1.0.229" }
 smol            = { version = "=2.0.2" }
 thiserror       = { version = "=2.0.21" }
 
-iced = { version = "0.15.0-dev-escamote-custom", path = "." }
-iced_beacon = { version = "0.15.0-dev-escamote-custom", path = "beacon" }
-iced_core = { version = "0.15.0-dev-escamote-custom", path = "core" }
-iced_debug = { version = "0.15.0-dev-escamote-custom", path = "debug" }
-iced_devtools = { version = "0.15.0-dev-escamote-custom", path = "devtools" }
-iced_futures = { version = "0.15.0-dev-escamote-custom", path = "futures" }
-iced_graphics = { version = "0.15.0-dev-escamote-custom", path = "graphics" }
-iced_highlighter = { version = "0.15.0-dev-escamote-custom", path = "highlighter" }
-iced_program = { version = "0.15.0-dev-escamote-custom", path = "program" }
-iced_renderer = { version = "0.15.0-dev-escamote-custom", path = "renderer" }
-iced_runtime = { version = "0.15.0-dev-escamote-custom", path = "runtime" }
-iced_selector = { version = "0.15.0-dev-escamote-custom", path = "selector" }
-iced_test = { version = "0.15.0-dev-escamote-custom", path = "test" }
-iced_tester = { version = "0.15.0-dev-escamote-custom", path = "tester" }
-iced_tiny_skia = { version = "0.15.0-dev-escamote-custom", path = "tiny_skia", default-features = false }
-iced_wgpu = { version = "0.15.0-dev-escamote-custom", path = "wgpu", default-features = false }
-iced_widget = { version = "0.15.0-dev-escamote-custom", path = "widget" }
-iced_winit = { version = "0.15.0-dev-escamote-custom", path = "winit", default-features = false }
+iced = { version = "0.15.0-dev-entwynde-custom", path = "." }
+iced_beacon = { version = "0.15.0-dev-entwynde-custom", path = "beacon" }
+iced_core = { version = "0.15.0-dev-entwynde-custom", path = "core" }
+iced_debug = { version = "0.15.0-dev-entwynde-custom", path = "debug" }
+iced_devtools = { version = "0.15.0-dev-entwynde-custom", path = "devtools" }
+iced_futures = { version = "0.15.0-dev-entwynde-custom", path = "futures" }
+iced_graphics = { version = "0.15.0-dev-entwynde-custom", path = "graphics" }
+iced_highlighter = { version = "0.15.0-dev-entwynde-custom", path = "highlighter" }
+iced_program = { version = "0.15.0-dev-entwynde-custom", path = "program" }
+iced_renderer = { version = "0.15.0-dev-entwynde-custom", path = "renderer" }
+iced_runtime = { version = "0.15.0-dev-entwynde-custom", path = "runtime" }
+iced_selector = { version = "0.15.0-dev-entwynde-custom", path = "selector" }
+iced_test = { version = "0.15.0-dev-entwynde-custom", path = "test" }
+iced_tester = { version = "0.15.0-dev-entwynde-custom", path = "tester" }
+iced_tiny_skia = { version = "0.15.0-dev-entwynde-custom", path = "tiny_skia", default-features = false }
+iced_wgpu = { version = "0.15.0-dev-entwynde-custom", path = "wgpu", default-features = false }
+iced_widget = { version = "0.15.0-dev-entwynde-custom", path = "widget" }
+iced_winit = { version = "0.15.0-dev-entwynde-custom", path = "winit", default-features = false }
 
 arboard = { version = "3.6", default-features = false }
 bincode = "1.3"
