@@ -61,15 +61,11 @@ pub use primitive::Primitive;
 #[cfg(feature = "geometry")]
 pub use geometry::Geometry;
 
-use crate::{
-    core::{Background, Color, Font, Point, Rectangle, Size, Transformation, renderer},
-    graphics::{
-        Shell,
-        Viewport,
-        mesh,
-        text::{Editor, Paragraph},
-    },
-};
+use crate::core::renderer;
+use crate::core::{Background, Color, Font, Point, Rectangle, Size, Transformation};
+use crate::graphics::mesh;
+use crate::graphics::text::{Editor, Paragraph};
+use crate::graphics::{Shell, Viewport};
 
 /// A [`wgpu`] graphics renderer for [`iced`].
 ///
@@ -238,8 +234,7 @@ impl Renderer {
             texture,
             if graphics::color::GAMMA_CORRECTION {
                 wgpu::TextureFormat::Rgba8UnormSrgb
-            }
-            else {
+            } else {
                 wgpu::TextureFormat::Rgba8Unorm
             },
         );
@@ -279,7 +274,6 @@ impl Renderer {
         let mapped_buffer = slice.get_mapped_range().unwrap();
 
         mapped_buffer
-            .expect("Invalid mapped buffer.")
             .chunks(dimensions.padded_bytes_per_row)
             .fold(vec![], |mut acc, row| {
                 acc.extend(&row[..dimensions.unpadded_bytes_per_row]);
@@ -459,8 +453,7 @@ impl Renderer {
                 continue;
             };
 
-            let Some(scissor_rect) = nudge::snap(physical_bounds)
-            else {
+            let Some(scissor_rect) = nudge::snap(physical_bounds) else {
                 continue;
             };
 
@@ -866,7 +859,7 @@ impl graphics::geometry::Renderer for Renderer {
                 }
 
                 layer.draw_text_group(text, transformation);
-            },
+            }
             Geometry::Cached(cache) => {
                 if let Some(meshes) = cache.meshes {
                     layer.draw_mesh_cache(meshes, transformation);
@@ -881,7 +874,7 @@ impl graphics::geometry::Renderer for Renderer {
                 if let Some(text) = cache.text {
                     layer.draw_text_cache(text, transformation);
                 }
-            },
+            }
         }
     }
 }
@@ -911,7 +904,6 @@ impl renderer::Headless for Renderer {
 
         let adapter = instance
             .request_adapter(&wgpu::RequestAdapterOptions {
-                apply_limit_buckets: false,
                 power_preference: wgpu::PowerPreference::HighPerformance,
                 force_fallback_adapter: false,
                 compatible_surface: None,
@@ -941,8 +933,7 @@ impl renderer::Headless for Renderer {
             queue,
             if graphics::color::GAMMA_CORRECTION {
                 wgpu::TextureFormat::Rgba8UnormSrgb
-            }
-            else {
+            } else {
                 wgpu::TextureFormat::Rgba8Unorm
             },
             Some(graphics::Antialiasing::MSAAx4),
